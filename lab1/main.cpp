@@ -66,11 +66,12 @@ int main() {
     for (int j=0;j<k; j++){
         for (int r = 0; r < i; r++)
             if(mas[j][r]==id){
-                if (r==origin)
+                if (r==origin){
                     origin_call+=3*(double)stod(mas[j][duration]);
+                    sms_summ+=1*(double)stod(mas[j][sms]);
+                }
                 if (r==dest)
                     dest_call+=1*(double)stod(mas[j][duration]);
-                sms_summ+=1*(double)stod(mas[j][sms]);
             }
     }
     summ=origin_call+dest_call+sms_summ;
